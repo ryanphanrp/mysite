@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+    <div class="title">
+        <h2>{{ question.body }}</h2>
+    </div>
+    <div class="content">
+        {% if error_message %}<p><strong>{{ error_message }}</strong></p>{% endif %}
+
+        {% if question.choice_set.exists %}
+            <form action="{% url 'polls:vote' question.id %}" method="post">
+                {% csrf_token %}
+                <ul class="vote">
+                    {% for answer in question.choice_set.all %}
+                        <li class="answer">
+                            <input type="radio" name="answer" id="answer{{ answer.id }}" value="{{ answer.id }}">
+                            <label for="answer{{ answer.id }}">{{ answer.text }}</label>
+                        </li>
+                    {% endfor %}
+                </ul>
+                <input type="submit" value="Vote" class="votebtn">
+            </form>
+        {% else %}
+            <p><strong>There are no answer for this question.</strong></p>
+        {% endif %}
+    </div>
+{% endblock %}

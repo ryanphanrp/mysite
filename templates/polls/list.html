@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+    <div class="title">
+        <h2>Question for me!</h2>
+    </div>
+    <div class="content">
+        {% if questions %}
+            <ul class="listquestions">
+                {% for question in questions %}
+                    <li class="question"><a href="{% url 'polls:detail' question.id %}">{{ question.body }}</a> -
+                        <small>{{ question.publish }}</small></li>
+                {% endfor %}
+            </ul>
+        {% else %}
+            <h4>There are NO questions for me!</h4>
+        {% endif %}
+    </div>
+
+{% endblock %}

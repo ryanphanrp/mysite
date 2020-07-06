@@ -1,0 +1,102 @@
+* {
+    box-sizing: border-box;
+}
+
+
+body {
+    margin: 0px;
+    background-color: transparent;
+}
+
+.header h1 {
+    text-align: center;
+    color: #f40552;
+}
+
+.nav {
+    background-color: #2fc4b2;
+}
+
+.nav ul {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+}
+
+.nav li {
+    padding: 5px 20px 5px 20px;
+}
+
+.nav li:hover {
+    background-color: #12947f;
+}
+
+.container {
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.title {
+    background-color: #f40552;
+    width: 50%;
+}
+
+.title h2 {
+    color: white;
+    text-align: center;
+}
+
+.content {
+    border: 1px solid gray;
+    padding: 30px;
+    width: 50%;
+}
+
+a {
+    text-decoration: initial;
+    font-weight: 600;
+}
+
+.nav .list a {
+    color: azure;
+}
+
+.again {
+    background-color: darkgrey;
+    padding: 5px;
+    width: 50%;
+    text-align: center;
+}
+
+.again a {
+    color: #ffffff;
+}
+
+.vote {
+    list-style: none;
+    padding-inline-start: 10px;
+    margin-bottom: 30px;
+}
+
+.question a {
+    color: #f40552;
+}
+
+.listquestions {
+    padding-inline-start: 20px;
+}
+
+.votebtn {
+    width: 100%;
+    padding: 5px 20px;
+    font-weight: 600;
+    color: #ffffff;
+    background-color: #f40552;
+    border: none;
+}
+
+.answer {
+    font-weight: 600;
+}
